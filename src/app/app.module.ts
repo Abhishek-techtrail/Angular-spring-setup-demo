@@ -3,16 +3,21 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { CommonService } from './common.service';
+import { FirstpageComponent } from './firstpage/firstpage.component';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FirstpageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
